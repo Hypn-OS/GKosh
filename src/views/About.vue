@@ -12,16 +12,16 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+          Welcome to GKosh
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br>please join our online
+          A companion similar to an active agent, that helps the reader to organize and retrieve the highlighted text, bookmarked page and credentials of the content source in the cloud across heterogeneous platforms, gadgets and applications
+          <br>Welcome to the knowledge hub
           <a
             href="https://community.vuetifyjs.com"
             target="_blank"
-          >Discord Community</a>
+          >Community</a>
         </p>
       </v-col>
 
