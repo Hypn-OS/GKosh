@@ -1,24 +1,29 @@
 <template>
   <div class="home">
-    <Card img="png.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" date="11/12/2020" category="Tech" />
+    <Card img="png.svg" title="Multiprocessing for Data Scientists" date="11/12/2020" category="Tech" />
     <v-divider></v-divider>
-    <Card img="jpg.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="jpg.svg" title="Your Immune System and the Coronavirus" date="11/12/2020" category="Health" />
     <v-divider></v-divider>
-    <Card img="pdf.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="pdf.svg" title="Unlock 3.0 in Bengaluru" date="11/12/2020" category="News" />
     <v-divider></v-divider>
-    <Card img="doc.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="doc.svg" title="Virtual feeding: Posting food photos" date="11/12/2020" category="Food" />
     <v-divider></v-divider>
-    <Card img="txt.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="png.svg" title="Multiprocessing for Data Scientists" date="11/12/2020" category="Tech" />
     <v-divider></v-divider>
-    <Card img="png.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="jpg.svg" title="Your Immune System and the Coronavirus" date="11/12/2020" category="Health" />
     <v-divider></v-divider>
-    <Card img="txt.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="pdf.svg" title="Unlock 3.0 in Bengaluru" date="11/12/2020" category="News" />
     <v-divider></v-divider>
-    <Card img="png.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="doc.svg" title="Virtual feeding: Posting food photos" date="11/12/2020" category="Food" />
     <v-divider></v-divider>
-    <Card img="doc.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="png.svg" title="Multiprocessing for Data Scientists" date="11/12/2020" category="Tech" />
     <v-divider></v-divider>
-    <Card img="pdf.svg" title="Lorem Ipsum doler imit kdjfdl xcjck" />
+    <Card img="jpg.svg" title="Your Immune System and the Coronavirus" date="11/12/2020" category="Health" />
+    <v-divider></v-divider>
+    <Card img="pdf.svg" title="Unlock 3.0 in Bengaluru" date="11/12/2020" category="News" />
+    <v-divider></v-divider>
+    <Card img="doc.svg" title="Virtual feeding: Posting food photos" date="11/12/2020" category="Food" />
+
 
     <v-btn class="add-btn" fab dark color="primary" @click.stop="sheet = true">
       <v-icon dark>mdi-plus</v-icon>
