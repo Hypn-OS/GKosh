@@ -8,7 +8,7 @@ const vuetify = new Vuetify({
     theme: {
       themes: {
         light: {
-            primary: '#6200ee',
+            primary: '#1e319d',
             secondary: colors.grey.darken1,
             accent: colors.shades.black,
             error: colors.red.accent3,

@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
        <v-img max-width="150px" class="mx-auto mb-3 rounded-circle elevation-4" src="../assets/avatar.png" alt="" />
-       <h2>Nikola Tesla</h2>
+       <h2>{{ $store.state.userProfile.name }}</h2>
        <p class="text--disabled"><i>Invention is the most important product of man’s creative brain. The ultimate purpose is the complete mastery of mind over the material world, the harnessing of human nature to human needs.</i></p>
        <div class="d-row">
            <v-btn color="grey lighten-5" elevation="0">
