@@ -18,6 +18,8 @@ The current scenario requires the following things to deal with:
 - Cross Platforms
 - Different extensions of data (eg. pdf, txt, doc, HTML, etc)
 
+The whole idea is compiled into a Presentation that can be viewed here [Gkosh](https://www.canva.com/design/DADxetPkCCI/-u8tQ_zmklCJPtdQ8sQdmw/view?website#2:g-kosh-a-bibliophile-companion). This presentation contains all the basic ideas and the solution provided. 
+
 # OVERVIEW OF THE SOLUTION :globe_with_meridians:
 We are going to have three platforms for the frontend side which will be connected to a centralized backend server on the cloud. We will retrieve information/data through various sources and will store them on the centralized backend on the cloud so that we can fetch the same data on any platform whenever & wherever needed.
 
