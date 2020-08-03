@@ -7,7 +7,6 @@ import Single from '../views/Single.vue'
 import Categories from '../views/Categories.vue'
 import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
-import Video from '../views/Video.vue'
 
 
 import { auth } from '../firebase'
@@ -71,14 +70,6 @@ Vue.use(VueRouter)
       requiresAuth: true
     }
   },
-  {
-    path: '/video',
-    name: 'Video',
-    component: Video,
-    meta: {
-      requiresAuth: true
-    }
-  }
 ]
 
 const router = new VueRouter({

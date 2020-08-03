@@ -1,16 +1,18 @@
 <template>
     <v-container class="pa-0 container">
         <!-- <iframe
-         src="https://docs.google.com/gview?url=http://africau.edu/images/default/sample.pdf&embedded=true" 
-         frameborder="0"
-        allowfullscreen
-        ></iframe> -->
-        <!-- <iframe
          src="http://africau.edu/images/default/sample.pdf" 
          frameborder="0"
         allowfullscreen
         ></iframe> -->
-        {{$route.query.title}}
+
+        <iframe
+            v-if="article.type == 'doc'"
+            :src="`https://docs.google.com/gview?url=${article.doc.docUrl}&embedded=true`" 
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
         <v-row>
             <v-col cols="12">
                 <v-img :src="article.doc.docUrl"></v-img>
@@ -24,28 +26,30 @@ import * as fb from "../firebase";
 
 export default {
   name: "Single",
+  props:["article"],
 
   data: () => ({
-    article: ''
+    
   }),
   methods: {
-      getArticle(){
-          fb.articleCollection.where("title", "==", this.$route.query.title)
-          .get().then(function(doc) {
-            if (doc.exists) {
-                this.article = doc.data();
-                console.log("Document data:", doc.data());
-            } else {
-                // doc.data() will be undefined in this case
-                console.log("No such document!");
-            }
-            }).catch(function(error) {
-                console.log("Error getting document:", error);
-            });
-                }
+    //   getArticle(){
+    //       fb.articleCollection.where("title", "==", 'Ayush Bhardwaj')
+    //       .get().then(function(doc) {
+    //           console.log( doc)
+    //         if (doc.exists) {
+    //             this.article = doc.data();
+    //             console.log("Document data:", doc.data());
+    //         } else {
+    //             // doc.data() will be undefined in this case
+    //             console.log("No such document!");
+    //         }
+    //         }).catch(function(error) {
+    //             console.log("Error getting document:", error);
+    //         });
+    //     }
   },
   created: function () {
-    this.getArticle();
+    // this.getArticle();
   },
 };
 </script>
