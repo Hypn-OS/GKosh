@@ -71,8 +71,8 @@ Suppose you are working on a project. You need article A to start your project, 
 This is just a single example and the real scenario can be more complex.
 So we are planning to develop a system where user will be able to save a continuous chain of data so that he/she may fetch them in that order whenever needed.
 
-# Deployed Version: Click https://gkosh.herokuapp.com to access the scalable as well as live deployed version of the application with it's basic functionality and much more.
-
+# Deployed Version: 
+Click https://gkosh.herokuapp.com to access the scalable as well as live deployed version of the application with its basic functionality and much more.
 # Design :computer:
 
 ![GKosh](/assets/Gkosh.gif)
