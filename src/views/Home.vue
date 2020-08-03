@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <!-- <v-btn large block color="primary" @click="getBlob">Submit</v-btn> -->
     <template v-if="articles == ''">
       <v-skeleton-loader
         v-for="index in 6"
@@ -11,6 +12,7 @@
     </template>
 
     <Card v-for="article in articles" v-bind:key="article.dateStamp"
+      :doc="article"
       :img="setImg(article)"
       :title="article.title"
       :date="article.dateStamp"
@@ -164,6 +166,8 @@
               style="max-width:60%"
             />
 
+            <Video v-if="formArticle.type == 'video'" />
+
             <v-btn large block color="primary" @click="saveArticle">Submit</v-btn>
           </v-form>
         </div>
@@ -175,11 +179,12 @@
 <script>
 import * as fb from "../firebase";
 import Card from "@/components/Card.vue";
+import Video from "../components/Video"
 
 export default {
   name: "Home",
   components: {
-    Card,
+    Card,Video,
   },
   data() {
     return {
@@ -207,6 +212,7 @@ export default {
         { img: "txt.svg", title: "Note", type: "note" },
         { img: "jpg.svg", title: "Photo", type: "photo" },
         { img: "paperclip.svg", title: "Document", type: "doc" },
+        { img: "paperclip.svg", title: "Video", type: "video" },
       ],
     };
   },
@@ -229,6 +235,7 @@ export default {
       this.doc.docName = files[0].name;
     },
     async saveArticle() {
+      await this.getBlob()
       this.loading = true
       var articleObj = {
         title: this.formArticle.title,
@@ -245,7 +252,7 @@ export default {
       };
 
       
-      if (this.checkDuplicate() != 'exists' && this.doc.docData != '') {
+      if (this.doc.docData != '') {
         fb.storage
           .ref().child("docs/" + this.doc.docName)
           .put(this.doc.docData)
@@ -264,14 +271,14 @@ export default {
             this.dialog = false
             this.resetArticleObject()
             this.fetchArticles()
-            console.log(data)
+            
             
           })
           .catch( (error) => {
             this.loading = false;
             console.log(error);
           });
-      } else if(this.checkDuplicate() != 'exists'){
+      } else{
           
           fb.articleCollection.add(articleObj)
           .then( (data) => {
@@ -280,7 +287,7 @@ export default {
             this.dialog = false
             this.resetArticleObject()
             this.fetchArticles()
-            console.log(data)
+            
             
           })
           .catch( (error) => {
@@ -296,7 +303,7 @@ export default {
           this.articles.push(doc.data());
         });
       });
-      console.log(this.articles);
+      
     },
     async fetchCategories(){
       this.categories = []
@@ -305,7 +312,7 @@ export default {
             this.categories.push(doc.data().name)
           })
       });
-      console.log(this.categories)
+      
     },
     resetArticleObject(){
       this.formArticle.title = '';
@@ -319,7 +326,7 @@ export default {
       this.doc.type = '';
     },
     setImg(article){
-      console.log(article)
+      
       if(article.type == 'photo'){
         if (article.doc.type == 'image/png') {
           return 'png.svg'
@@ -340,6 +347,8 @@ export default {
         }else if(article.doc.type == 'application/vnd.openxmlformats-officedocument.wordprocessing'){
           return 'doc.svg'
         }
+      }else if (article.type == 'video') {
+        return 'paperclip.svg'
       }
 
       return 'png.svg'
@@ -356,13 +365,25 @@ export default {
       .get()
       .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
-              console.log(doc)
+              
               return 'exists'
           });
       })
       .catch(function(error) {
           console.log("Error getting documents: ", error);
       });
+    },
+    async getBlob(){
+      if (document.querySelector('.download_links a')) {
+        var fileName = document.querySelector('.download_links a').getAttribute('download')
+        var blobUrl = document.querySelector('.download_links a').href
+        let blob = await fetch(blobUrl).then(r => r.blob());
+        console.log(blob)
+        this.doc.docData = blob
+        this.doc.type = 'video/mp4'
+        this.doc.docName= fileName
+        // return blob
+      }
     }
   },
   created: function () {

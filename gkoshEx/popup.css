@@ -1,0 +1,17 @@
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#popup {
+    padding: 4px 6px;
+    width: 20rem;
+    height: 21rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}

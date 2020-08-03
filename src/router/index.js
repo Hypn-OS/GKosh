@@ -69,7 +69,7 @@ Vue.use(VueRouter)
     meta: {
       requiresAuth: true
     }
-  }
+  },
 ]
 
 const router = new VueRouter({
