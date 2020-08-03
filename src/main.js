@@ -9,14 +9,6 @@ import { auth } from './firebase'
 Vue.config.productionTip = false
 Vue.use(require('vue-moment'))
 
-// new Vue({
-//   router,
-//   store,
-//   vuetify,
-//   render: h => h(App)
-// }).$mount('#app')
-
-
 let app
 auth.onAuthStateChanged(user => {
   if (!app) {
