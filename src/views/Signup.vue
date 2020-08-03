@@ -52,7 +52,10 @@ export default {
           email: this.signupForm.email,
           password: this.signupForm.password,
           name: this.signupForm.name
-        })
+        },
+        
+        )
+        this.$router.push('/login');
       }
     }
 };
