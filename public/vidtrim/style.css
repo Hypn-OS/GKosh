@@ -1,0 +1,102 @@
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+video, canvas {
+    width: 100%;
+    max-height: calc(100% - 8px);
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+canvas{
+    z-index: 10;
+    position: absolute;
+    top:0;
+    left:0;
+    border: 0;
+}
+
+label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+input[type=checkbox]{
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#resizable {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    border: 1px solid black;
+    resize:both;
+    overflow:auto; /* something other than visible */
+    padding:10px !important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.hide_until_load {
+    vertical-align: middle;
+    text-align: center;
+    max-width: 1000px;
+    padding-top: 20px;
+}
+
+.slider_wrapper{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.slider_time_pos{
+    position: absolute;
+    width: 4px;
+    background: red;
+    height: 100%;
+    top: 0;
+    left: 20%;
+    z-index: 12;
+    cursor: pointer;
+}
+
+.play_toggle {
+    width: 40px;
+}
+
+.ffmpeg {
+    vertical-align: middle;
+    text-align: center;
+    font-family: monospace;
+    padding: 6px;
+    margin-top: 20px;
+    border: 1px dashed gray;
+    background: black;
+    color: white;
+    cursor: text;
+    max-width:900px;
+}
+
+.ffmpeg_log {
+    font-family: monospace;
+    white-space: pre;
+    max-height: 100px;
+    max-width: 900px;
+    overflow-y: auto;
+}
+
+.download_links a{
+    display: block;
+}

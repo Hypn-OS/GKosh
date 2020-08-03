@@ -7,6 +7,7 @@ import Single from '../views/Single.vue'
 import Categories from '../views/Categories.vue'
 import Profile from '../views/Profile.vue'
 import About from '../views/About.vue'
+import Video from '../views/Video.vue'
 
 
 import { auth } from '../firebase'
@@ -66,6 +67,14 @@ Vue.use(VueRouter)
     path: '/about',
     name: 'About',
     component: About,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/video',
+    name: 'Video',
+    component: Video,
     meta: {
       requiresAuth: true
     }

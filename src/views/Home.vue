@@ -264,7 +264,7 @@ export default {
             this.dialog = false
             this.resetArticleObject()
             this.fetchArticles()
-            console.log(data)
+            
             
           })
           .catch( (error) => {
@@ -280,7 +280,7 @@ export default {
             this.dialog = false
             this.resetArticleObject()
             this.fetchArticles()
-            console.log(data)
+            
             
           })
           .catch( (error) => {
@@ -296,7 +296,7 @@ export default {
           this.articles.push(doc.data());
         });
       });
-      console.log(this.articles);
+      
     },
     async fetchCategories(){
       this.categories = []
@@ -305,7 +305,7 @@ export default {
             this.categories.push(doc.data().name)
           })
       });
-      console.log(this.categories)
+      
     },
     resetArticleObject(){
       this.formArticle.title = '';
@@ -319,7 +319,7 @@ export default {
       this.doc.type = '';
     },
     setImg(article){
-      console.log(article)
+      
       if(article.type == 'photo'){
         if (article.doc.type == 'image/png') {
           return 'png.svg'
@@ -356,7 +356,7 @@ export default {
       .get()
       .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
-              console.log(doc)
+              
               return 'exists'
           });
       })
