@@ -61,19 +61,22 @@ THE REAL PROBLEM IS NOT HOW, WHERE AND WHAT YOU SAVE.
 THE REAL PROBLEM IS TO RECALL IT WHENEVER NEEDED.
 
 We take this problem very seriously and worked very hard to design the best possible solution. 
-1. AUTOMATED CLASSIFICATION OF DATA
+1. AUTOMATED CLASSIFICATION OF DATA:
 The custom Machine learning model we develop will automatically classify our data and save them accordingly. Each and everything you save will be automatically classified into different classes according to their semantics. The ML algorithms we are planning to implement for this are BoW(Bag of Words), Word2Vec(Word to vectors), TF-IDF or GloVe.
-2. CLASSES WE PROPOSE
+2. CLASSES WE PROPOSE:
 The labels we provide will group different data/Information(not limited) to Education, food, living, Shopping, places, etc. We are also planning to differentiate text, pics, and videos.
-3. CHAIN OF INFORMATION
+3. CHAIN OF INFORMATION:
 There is one exciting feature we are planning to implement which will make the project even more useful than ever.
 Suppose you are working on a project. You need article A to start your project, then Article B, then C and so on. This is the order of articles you need to read to complete your project. Now you want to save the data in that order only so that you can fetch it one after another. 
 This is just a single example and the real scenario can be more complex.
 So we are planning to develop a system where user will be able to save a continuous chain of data so that he/she may fetch them in that order whenever needed.
 
+# Deployed Version: Click https://gkosh.herokuapp.com to access the scalable as well as live deployed version of the application with it's basic functionality and much more.
+
 # Design :computer:
 
 ![GKosh](/assets/Gkosh.gif)
+
 
 # REVENUE GENERATION :moneybag:
 
